@@ -1,34 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from 'react';
+import ReactPlayer from 'react-player';
+import './App.css';
+import videoBg from '../src/assets/video.mp4';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+	return (
+		<div className="main">
+			<div className="overlay"></div>
+			<h2>Refresh your brain here!</h2>
+			<video src={videoBg} autoPlay loop muted />
+			{/* <ReactPlayer
+				className="react-player"
+				url={
+					'https://www.youtube.com/watch?v=UCG1aXVO8H8&ab_channel=TaitungAmazing'
+				}
+				width="100vw"
+				height="100vh"
+				loop={true}
+				playing={true}
+				muted={true}
+				controls={false}
+			/> */}
+			{/* <ReactPlayer
+				className="react-player"
+				url={
+					'https://www.youtube.com/watch?v=1OTZ9rjFv78&ab_channel=%E6%A1%83%E5%9C%92%E6%99%BA%E6%85%A7%E6%97%85%E9%81%8A%E9%9B%B2TaoyuanTravel'
+				}
+				// width="100vw"
+				// height="100vh"
+				loop={true}
+				playing={true}
+				muted={true}
+				controls={false}
+			/> */}
+		</div>
+	);
 }
 
-export default App
+export default App;
