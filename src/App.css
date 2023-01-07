@@ -16,7 +16,7 @@
 	z-index: -100;
 }
 
-h2 {
+h1 {
 	color: white;
 	position: absolute;
 	width: 100%;
@@ -28,6 +28,7 @@ h2 {
 	align-items: center;
 }
 
+/* background video */
 .main {
 	width: 100vw;
 	height: 100vh;
@@ -37,6 +38,7 @@ video {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	/* z-index: 99999; */
 }
 
 .overlay {
@@ -45,5 +47,47 @@ video {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* typing  */
+#writing {
+	color: transparent;
+	white-space: nowrap;
+}
+
+#writing::after {
+	content: 'Hello real live world!';
+	position: absolute;
+	top: 24rem;
+	color: #fff;
+	overflow: hidden;
+	border-right: 2px solid #fff;
+	animation: typing 7s steps(31) infinite;
+}
+
+@keyframes typing {
+	0% {
+		width: 0%;
+	}
+	50% {
+		width: 460px;
+	}
+	100% {
+		width: 0%;
+	}
+}
+
+/* country flags */
+.countries {
+	position: absolute;
+	padding-top: 40rem;
+	padding-left: 30rem;
+	z-index: 99999;
+}
+
+.countries img {
+	width: 70px;
+	opacity: 0.7;
+	padding-left: 7rem;
 }
