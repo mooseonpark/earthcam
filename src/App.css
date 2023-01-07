@@ -88,6 +88,12 @@ video {
 
 .countries img {
 	width: 70px;
-	opacity: 0.7;
-	padding-left: 7rem;
+	opacity: 0.6;
+	margin-left: 7rem;
+}
+
+.countries img:hover {
+	transition: linear 0.6s;
+	transform: scale(1.5);
+	opacity: 1;
 }
